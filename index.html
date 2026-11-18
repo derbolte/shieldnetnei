@@ -26,19 +26,33 @@
             <h1>Dein Schutz.<br><span class="accent">Deine Kontrolle.</span></h1>
             <p>Datenschutz und Sicherheit an einem Ort.</p>
           </div>
-          <div class="shield-art" aria-hidden="true"><div class="shield-inner">✓</div></div>
+          <div class="shield-art" aria-hidden="true"><div class="web-lines"></div><div class="shield-inner">✦</div></div>
         </div>
 
         <div class="protection-card">
           <div class="card-heading">
-            <div><span class="eyebrow">SCHUTZSTATUS</span><h2>Webschutz</h2></div>
+            <div><span class="eyebrow">SCHUTZSTATUS</span><h2>Deine Schutzmodule</h2></div>
             <span class="status-text" id="protectionStatus">Aktiv (Demo)</span>
           </div>
-          <div class="switch-row">
-            <div><strong>Schutz aktivieren</strong><small>Filter für Werbung, Tracker und bekannte Gefahren</small></div>
-            <button class="toggle on" id="masterToggle" aria-label="Webschutz umschalten" aria-pressed="true"><span></span></button>
+          <div class="protection-switches">
+            <div class="switch-row">
+              <div><strong>Werbeblocker</strong><small>Werbung und Pop-ups filtern</small></div>
+              <button class="toggle on" data-feature="ads" aria-label="Werbeblocker umschalten" aria-pressed="true"><span></span></button>
+            </div>
+            <div class="switch-row">
+              <div><strong>Trackerschutz</strong><small>Bekannte Tracking-Domains blockieren</small></div>
+              <button class="toggle on" data-feature="trackers" aria-label="Trackerschutz umschalten" aria-pressed="true"><span></span></button>
+            </div>
+            <div class="switch-row">
+              <div><strong>Schadsoftwareschutz</strong><small>Bekannte gefährliche Domains sperren</small></div>
+              <button class="toggle on" data-feature="malware" aria-label="Schadsoftwareschutz umschalten" aria-pressed="true"><span></span></button>
+            </div>
+            <div class="switch-row">
+              <div><strong>VPN</strong><small>Geschützte Verbindung (separate Funktion)</small></div>
+              <button class="toggle" id="vpnQuickToggle" aria-label="VPN umschalten" aria-pressed="false"><span></span></button>
+            </div>
           </div>
-          <p class="notice">ℹ️ Diese Schalter simulieren die Bedienung. Es findet noch keine echte Filterung statt.</p>
+          <p class="notice">ℹ️ Die Schalter zeigen das geplante Bedienkonzept. Noch keine echte Filterung oder VPN-Verbindung.</p>
         </div>
 
         <div class="stats-grid">

@@ -1,6 +1,8 @@
-# ShieldNetNei v0.5
+# ShieldNetNei v0.6
 
 ## Was ist neu?
+- Neues rot-blaues Superhelden-Comic-Farbschema mit Netz-Akzenten
+- Vier getrennte Demo-Schalter: Werbeblocker, Trackerschutz, Schadsoftwareschutz und VPN
 - Drei Bereiche: Schutz, Verbindung und Sicherheit
 - Demo-Schalter für Webschutz und VPN
 - Auswahl von Beispiel-Serverstandorten

@@ -5,18 +5,31 @@ tabs.forEach(btn => btn.addEventListener('click', () => {
   panels.forEach(panel => panel.classList.toggle('active', panel.id === `panel-${btn.dataset.tab}`));
 }));
 
-const masterToggle = document.getElementById('masterToggle');
-masterToggle.addEventListener('click', () => {
-  const enabled = masterToggle.classList.toggle('on');
-  masterToggle.setAttribute('aria-pressed', String(enabled));
-  document.getElementById('protectionStatus').textContent = enabled ? 'Aktiv (Demo)' : 'Pausiert (Demo)';
+document.querySelectorAll('.toggle[data-feature]').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const enabled = toggle.classList.toggle('on');
+    toggle.setAttribute('aria-pressed', String(enabled));
+    const enabledCount = document.querySelectorAll('.toggle[data-feature].on').length;
+    document.getElementById('protectionStatus').textContent =
+      enabledCount === 3 ? 'Alle Filter aktiv (Demo)' : `${enabledCount}/3 Filter aktiv (Demo)`;
+  });
 });
 
 let vpnConnected = false;
+const quickVpnToggle = document.getElementById('vpnQuickToggle');
+function updateVpnUI() {
+  document.getElementById('vpnStatus').textContent = vpnConnected ? 'Verbunden (Demo)' : 'Nicht verbunden';
+  document.getElementById('vpnToggle').textContent = vpnConnected ? 'VPN trennen (Demo)' : 'VPN verbinden (Demo)';
+  quickVpnToggle.classList.toggle('on', vpnConnected);
+  quickVpnToggle.setAttribute('aria-pressed', String(vpnConnected));
+}
+quickVpnToggle.addEventListener('click', () => {
+  vpnConnected = !vpnConnected;
+  updateVpnUI();
+});
 document.getElementById('vpnToggle').addEventListener('click', event => {
   vpnConnected = !vpnConnected;
-  document.getElementById('vpnStatus').textContent = vpnConnected ? 'Verbunden (Demo)' : 'Nicht verbunden';
-  event.currentTarget.textContent = vpnConnected ? 'VPN trennen (Demo)' : 'VPN verbinden (Demo)';
+  updateVpnUI();
 });
 
 document.querySelectorAll('.server').forEach(server => server.addEventListener('click', () => {
