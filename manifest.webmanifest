@@ -1,27 +1,14 @@
 {
-  "id": "./",
   "name": "ShieldNetNei",
   "short_name": "ShieldNetNei",
-  "description": "Privacy, protection and control.",
-  "lang": "de",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#080d0b",
-  "theme_color": "#080d0b",
+  "background_color": "#07130f",
+  "theme_color": "#07130f",
+  "description": "Datenschutz und Sicherheit in einer App.",
   "icons": [
-    {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    }
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png"}
   ]
 }

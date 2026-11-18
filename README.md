@@ -1,18 +1,17 @@
-# ShieldNetNei PWA v0.2
+# ShieldNetNei v0.5
 
-## Inhalt
-- index.html: Oberfläche
-- style.css: Cyber-Security-Design
-- app.js: Demo-Interaktionen und Deutsch/Englisch-Umschaltung
-- manifest.webmanifest: Web-App-Metadaten
-- sw.js: Offline-Caching
-- icons/: App-Symbole
+## Was ist neu?
+- Drei Bereiche: Schutz, Verbindung und Sicherheit
+- Demo-Schalter für Webschutz und VPN
+- Auswahl von Beispiel-Serverstandorten
+- Übersicht für Werbe-, Tracker-, Schadsoftware- und Phishing-Schutz
+- Demo-Linkprüfung
+- PWA-Grundgerüst für GitHub Pages
 
-## Lokal testen
-Ein Service Worker benötigt eine sichere Umgebung (HTTPS oder localhost). Einfaches Öffnen per file:// aktiviert ihn nicht.
+## Wichtiger Hinweis
+Dies ist weiterhin ein **Bedienoberflächen-Prototyp**. Die Schalter, Statistiken, VPN-Anzeige und Linkprüfung sind Simulationen. Es werden noch keine Werbung, Tracker oder Schadsoftware tatsächlich blockiert und es wird keine echte VPN-Verbindung aufgebaut.
 
-## Veröffentlichen
-Lade den gesamten Inhalt dieses Ordners unverändert auf einen statischen HTTPS-Webhost hoch. Die Dateien müssen im selben Verzeichnis liegen; der Ordner icons muss mit hochgeladen werden. Danach die HTTPS-Adresse in Safari öffnen und über Teilen > Zum Home-Bildschirm > Als Web-App öffnen > Hinzufügen installieren.
+Für echten, systemweiten Schutz auf iOS ist eine native iOS-App mit passenden Apple Network Extension-Funktionen und gegebenenfalls erforderlichen Berechtigungen nötig. Eine GitHub-Pages-Web-App kann diese iOS-Systemfunktionen nicht bereitstellen.
 
-## Sicherheitsgrenze
-Dies ist ein UI-/PWA-Prototyp. Die Demo-Regeln prüfen ausschließlich die Beispiel-Domains ads.example, tracker.example und malware.example. Es findet keine echte DNS-Filterung, Malware-Erkennung, VPN- oder Gerätesicherung statt. Vor einem Produktivbetrieb sind ein echter Filterdienst, Sicherheitsprüfung, Datenschutzkonzept und sichere Infrastruktur nötig.
+## Veröffentlichung
+Die Dateien in diesem ZIP gehören in das Stammverzeichnis des GitHub-Repositorys `schieldnetnei`. Danach GitHub Pages wie bisher aus dem Branch und Stammverzeichnis veröffentlichen.
